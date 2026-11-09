@@ -31,6 +31,6 @@ do
         dnf install $instance -y  &>> $LOGS_FILE
         VALIDATE "installing $instance $?"
     else
-        echo -e "$TIMESTAMP $instance is already installed ...$Yskipping $N"
+        echo -e "$TIMESTAMP $instance is already installed ...$Y skipping $N"
     fi
 done
