@@ -29,7 +29,7 @@ do
         dnf list installed $instance &>> $LOGS_FILE
     if [ $? -ne 0 ]; then
         dnf install $instance -y  &>> $LOGS_FILE
-        VALIDATE "installing $instance $?"
+        VALIDATE "installing $instance" $?
     else
         echo -e "$TIMESTAMP $instance is already installed ...$Y skipping $N"
     fi
