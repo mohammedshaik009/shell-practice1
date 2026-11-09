@@ -32,5 +32,5 @@ if [ $? -eq 0 ]; then
 else
     echo "installing nginx"
     dnf install nginx -y &>> $LOGS_FILE
-    VALIDATE $? nginx
+    VALIDATE nginx $?
 fi
