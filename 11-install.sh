@@ -12,7 +12,6 @@ VALIDATE(){
         echo "$1 is ...FAILED"
     else
         echo "$1 is ...SUCCESS"
-        fi
     fi    
 }
 dnf list installed mysql
