@@ -33,7 +33,7 @@ fi
 
 dnf list installed nginx  &>> $LOGS_FILE
 if [ $? -eq 0 ]; then
-    echo "nginx is already installed ....SKIPPING"
+    echo -e "$TIMESTAMP [INFO] nginx is already installed ....$Y SKIPPING $N"
 else
     echo "installing nginx"
     dnf install nginx -y &>> $LOGS_FILE
