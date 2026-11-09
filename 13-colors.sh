@@ -19,12 +19,12 @@ VALIDATE(){
     if [ $2 -ne 0 ]; then
         echo -e "$TIMESTAMP [ERROR] installing $1 is ...$R FAILED $N" | tee -a $LOGS_FILE
     else
-        echo -e "$TIMESATMP [INFO] installing $1 is ...$G SUCCESS $N" | tee -a $LOGS_FILE
+        echo -e "$TIMESTAMP [INFO] installing $1 is ...$G SUCCESS $N" | tee -a $LOGS_FILE
     fi    
 }
 dnf list installed mysql &>> $LOGS_FILE
 if [ $? -eq 0 ]; then
-    echo -e "$TIMESATMP [INFO] mysql is already installed ....$Y SKIPPING $N"
+    echo -e "$TIMESTAMP [INFO] mysql is already installed ....$Y SKIPPING $N"
 else
     echo "installing mysql"
     dnf install mysql -y  &>> $LOGS_FILE
