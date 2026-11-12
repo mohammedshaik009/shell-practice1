@@ -1,8 +1,8 @@
 #!/bin/bash
 
 SOURCE_DIR=$1
-DEST_DIR=$1
-DAYS=${2:-14} #default to 14 days
+DEST_DIR=$2
+DAYS=${3:-14} #default to 14 days
 TIMESTAMP=$(date "+%Y-%m-%d %H-%M-%S")
 
 if [ -z "$SOURCE_DIR" ] || [ -z "$DEST_DIR" ]; then
@@ -21,7 +21,7 @@ if [ ! -d "$DEST_DIR" ]; then
     exit 1
 fi
 
-FILES=$(find $SOURCE_DIR -type f -name "*.log" -mtime +$DAYS)
+FILES=$(find "$SOURCE_DIR" -type f -name "*.log" -mtime +$DAYS)
 
 if [ -z "$FILES" ]; then
     echo "no log files found older than 14 days"
