@@ -39,7 +39,7 @@ tar -czvf $LOGS_ARCHIVE $FILES
             echo "$FILE: file to be deleted"
                   rm -rf $FILE
             echo "$FILE: files deleted"
+         done <<< "$FILES"
     else
             echo "archival is FAILED"
-        done <<< "$FILES"
     fi
