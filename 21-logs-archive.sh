@@ -32,7 +32,7 @@ ARCHIVE_FILE=$DEST_FILE/logs-archive-$TIMESTAMP.tar.gz
 
 tar -czvf $ARCHIVE_FILE $FILES
     if [$? -ne 0 ]; then
-        echo "Archival is success"
+        echo "Archival is... success"
         while IFS= read -r FILE
         do
             echo "$FILE: file to be deleted"
