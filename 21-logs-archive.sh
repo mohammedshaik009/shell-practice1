@@ -30,7 +30,7 @@ fi
 
 ARCHIVE_FILE=$DEST_DIR/logs-archive-$TIMESTAMP.tar.gz
 
-tar -czvf $LOGS_ARCHIVE $FILES
+tar -czvf $ARCHIVE_FILE $FILES
 
     if [ $? -eq 0 ]; then
         echo "archival is success"
