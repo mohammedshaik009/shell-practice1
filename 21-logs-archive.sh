@@ -11,7 +11,7 @@ if [ -z "$SOURCE_DIR" ] || [ -z "$DEST_DIR" ]; then
     exit 1
 fi
 
-if [! -d "$SOURCE_DIR" ]; then
+if [ ! -d "$SOURCE_DIR" ]; then
     echo "$SOURCE_DIR directory does not exist"
     exit 1
 fi
