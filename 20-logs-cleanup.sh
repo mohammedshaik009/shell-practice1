@@ -1,7 +1,7 @@
 #!/bin/bash
 
 SOURCE_DIR=$1
-DAYS=${2-14} # default to 14 days
+DAYS=${2:-14} # default to 14 days
 
 if [ -z "$SOURCE_DIR" ]; then
     echo "ERROR:: Missing parameters "
@@ -25,5 +25,6 @@ fi
 while IFS= read -r FILE
 do
     echo "files to be deleted:$FILE"
-    
+    rm -rf $FILE
+    echo "files deleted: $FILE"
 done <<< "$FILES"
