@@ -38,7 +38,7 @@ tar -czvf $ARCHIVE_FILE $FILES
             echo "$FILE: file to be deleted"
             rm -rf $FILE
             echo "$FILE: file deleted"
-        done <<< $FILE
+        done <<< $FILES
     else
         echo "Archival is ...FAILED"
     fi  
