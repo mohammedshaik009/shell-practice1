@@ -28,7 +28,7 @@ if [ -z "$FILES" ]; then
     exit 0
 fi
 
-ARCHIVE_FILE="$DEST_FILE"/logs-archive-$TIMESTAMP.tar.gz
+ARCHIVE_FILE="$DEST_DIR"/logs-archive-$TIMESTAMP.tar.gz
 
 tar -czvf "$ARCHIVE_FILE" "$FILES"
     if [ $? -eq 0 ]; then
