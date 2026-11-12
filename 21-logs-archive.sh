@@ -41,4 +41,4 @@ tar -czvf $ARCHIVE_FILE $FILES
         done <<< $FILE
     else
         echo "Archival is ...FAILED"
-        
+    fi  
