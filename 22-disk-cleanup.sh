@@ -2,7 +2,7 @@
 
 DISK_USAGE=$( df -HT | grep -v Filesystem )
 USAGE_THRESHOLD=10
-SERVER_IP=$(curl curl http://169.254.169.254/latest/meta-data/local-ipv4)
+SERVER_IP=$(curl http://169.254.169.254/latest/meta-data/local-ipv4)
 while IFS= read -r line
 do
     USAGE=$(echo $line | awk '{print $6}' | cut -d "%" -f1)
